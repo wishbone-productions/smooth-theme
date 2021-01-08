@@ -1,6 +1,6 @@
 # Smooth Theme for laravel-admin
 
-This is a `laravel-admin` extension that make the default bootstrap theme more smooth also it provides a editor to adjust colors and settings
+This is a `laravel-admin` (z-song) extension that makes the default bootstrap theme a bit more smooth also it provides an editor to adjust colors and settings
 
 ## Screenshot
 
@@ -20,7 +20,6 @@ php artisan migrate
 
 // step 4
 php artisan admin:import smooth-theme
-
 ```
 
 ## notes
