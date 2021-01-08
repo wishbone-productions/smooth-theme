@@ -1,0 +1,34 @@
+{
+    "name": "laravel-admin-ext/smooth-theme",
+    "description": "Theme roler with smooth theme extention for laravel-admin 1.x adminlte3",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "theme"],
+    "homepage": "https://github.com/laravel-admin-ext/smooth-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sjors Broersen",
+            "email": "sjors [ad] wishbone.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6",
+        "stancl/virtualcolumn": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\SmoothTheme\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\SmoothTheme\\SmoothThemeServiceProvider"
+            ]
+        }
+    }
+}
