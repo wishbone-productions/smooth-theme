@@ -9,16 +9,21 @@ This is a `laravel-admin` (z-song) extension that makes the default bootstrap th
 ## Installation
 
 ```bash
-// step 1
-composer require laravel-admin-ext/smooth-theme
+// step 1, make repository available in composer.json
+"repositories": [
+    { "name": "laravel-admin-ext/smooth-theme", "type": "git", "url": "https://github.com/wishbone-productions/smooth-theme" }
+],
 
 // step 2
-php artisan vendor:publish --provider="Encore\SmoothTheme\SmoothThemeServiceProvider"
+composer require laravel-admin-ext/smooth-theme
 
 // step 3
-php artisan migrate
+php artisan vendor:publish --provider="Encore\SmoothTheme\SmoothThemeServiceProvider"
 
 // step 4
+php artisan migrate
+
+// step 5
 php artisan admin:import smooth-theme
 ```
 

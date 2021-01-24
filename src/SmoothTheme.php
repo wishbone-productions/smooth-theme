@@ -3,6 +3,8 @@
 namespace Encore\SmoothTheme;
 
 use Encore\Admin\Extension;
+use Encore\Admin\Admin;
+use Encore\SmoothTheme\SmoothThemeModel;
 use Encore\SmoothTheme\Http\Controllers\SmoothThemeController;
 
 class SmoothTheme extends Extension
@@ -23,8 +25,7 @@ class SmoothTheme extends Extension
     public static function boot()
     {
         static::registerRoutes();
-
-        //Admin::extend('media-manager', __CLASS__);
+        Admin::extend('smooth-theme', __CLASS__);
     }
 
     protected static function registerRoutes()
