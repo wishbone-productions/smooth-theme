@@ -1,6 +1,7 @@
 # Smooth Theme for laravel-admin
 
 This is a `laravel-admin` (z-song) extension that makes the default bootstrap theme a bit more smooth also it provides an editor to adjust colors and settings
+
 Version 0.8.2
 
 ## Screenshot
