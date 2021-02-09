@@ -19,7 +19,7 @@ Version 0.8.2
 composer require laravel-admin-ext/smooth-theme
 
 // step 3
-php artisan vendor:publish --provider="Encore\SmoothTheme\SmoothThemeServiceProvider"
+php artisan vendor:publish --provider="Encore\SmoothTheme\SmoothThemeServiceProvider" --force
 
 // step 4
 php artisan migrate
