@@ -342,7 +342,7 @@
             transform: translate(-var(--sidebar-width), 0);
         }
 
-        body.sidebar-open .sidebar-toggle,
+        body.sidebar-open .navbar,
         body.sidebar-open .content-wrapper,
         body.sidebar-open .right-side,
         body.sidebar-open .main-footer{
@@ -350,6 +350,7 @@
             transform: translate(var(--sidebar-width), 0);
         }
     }
+
 
 /*---------------------------------------------------------*/
 /* progress bar*/
@@ -428,6 +429,14 @@
 
     body .spinner{
         display:none;
+    }
+
+    body .nprogress-custom-parent{
+        overflow:inherit;
+    }
+
+    body #nprogress .bar {
+        overflow:hidden;
     }
 
     body .nprogress-custom-parent .spinner{
@@ -531,15 +540,57 @@
         box-sizing: border-box;
         position:fixed;
         bottom:0px;
-        width: calc(100% - var(--sidebar-width));
-        padding:20px 24px 14px 24px;
-        left:var(--sidebar-width);
+        padding:18px 24px 14px 24px;
         z-index:1000;
         box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
         vertical-align: middle;
         transition: none;
         line-height:30px;
     }
+
+    @media (max-width:767px){
+        body .box:not(.box-default):not(.box-primary) > .box-footer,
+        body .box:not(.box-default):not(.box-primary) > form > .box-footer{
+            font-size:0.8em;
+            padding:10px 14px 2px 14px;
+        }
+
+    }
+
+    @media (min-width:767px){
+        body .box:not(.box-default):not(.box-primary) > .box-footer,
+        body .box:not(.box-default):not(.box-primary) > form > .box-footer{
+            width: calc(100% - var(--sidebar-width));
+            left:var(--sidebar-width);
+        }
+
+    }
+
+    @media (max-width:565px){
+        body .box:not(.box-default):not(.box-primary) > .box-footer,
+        body .box:not(.box-default):not(.box-primary) > form > .box-footer{
+            line-height:36px;
+        }
+
+        body .box:not(.box-default):not(.box-primary) > .box-footer > label,
+        body .box:not(.box-default):not(.box-primary) > form > .box-footer > label{
+            left: 14px;
+            position: absolute;
+            background: #FFF;
+            width: 143px;
+            z-index:5;
+        }
+
+        body .box:not(.box-default):not(.box-primary) > .box-footer > ul,
+        body .box:not(.box-default):not(.box-primary) > form > .box-footer > ul{
+            right: 14px;
+            position: absolute;
+            background: #FFF;
+            z-index:10;
+        }
+    }
+
+
 
     body .box:not(.box-default) > .box-footer .col-md-8, body .box:not(.box-default) > form > .box-footer .col-md-8{
         line-height:20px;
@@ -557,7 +608,7 @@
         margin-right:4px;
     }
 
-/*
+    /*
     body .box:not(.box-default) > form > .box-footer .col-md-2{
         display:none;
     }
@@ -580,7 +631,6 @@
         body.sidebar-collapse .box:not(.box-default) > form > .box-footer{
             left:0;
             width:100%;
-            padding:10px;
             transition: all .3s ease-in-out;
         }
 
@@ -1025,7 +1075,7 @@
             position: absolute;
             right:0px;
             background: rgb(255,255,255);
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 49%);
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%);
         }
 
         th.column-__actions__{
