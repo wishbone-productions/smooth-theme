@@ -432,7 +432,8 @@
     }
 
     body .nprogress-custom-parent{
-        overflow:inherit;
+        overflow:hidden;
+        width:100%;
     }
 
     body #nprogress .bar {
